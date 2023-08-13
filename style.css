@@ -1,0 +1,223 @@
+@font-face {
+	font-family: 'Roboto-bold';
+	src: url('./assets//fonts/Roboto-Bold.ttf');
+}
+@font-face {
+	font-family: 'Roboto-regular';
+	src: url('./assets//fonts/Roboto-Regular.ttf');
+}
+*{
+	box-sizing: border-box;
+	margin: 0;
+}
+body {
+	background: #36384d;
+	font-family: 'Roboto-regular';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	margin: auto;
+	padding: 100px;
+}
+h1 {
+	font-family: 'Roboto-bold';
+	font-size: 55px;
+	color: #242543;
+	font-weight: 900;
+	line-height: 1.9em;
+
+}
+h2 {
+	font-family: 'Roboto-bold';
+	font-size: 30px !important;
+	margin: 20px auto;
+	color: #242543;
+	font-weight: 900;
+	line-height: 1.1em;
+}
+
+p {
+	font-size: 17px;
+	line-height: 1.9em;
+	color: #6a6a75;
+	font-weight: 500;
+}
+.nl-subtitle{
+	margin-bottom: 20px;
+}
+.nl-list span {
+	margin-right: 20px;
+}
+
+/* Main box container */
+.nl-container {
+	display: flex;
+	width: 70%;
+	height: 600px;
+	background: #fff;
+	padding: 20px; /* Padding for desktop */ 
+	border-radius: 20px;
+}
+
+
+/* First half column */
+.nl-column-55 {
+	width: 55%; /* Width for desktop */
+	padding: 40px !important;
+}
+
+/* Second half column */
+.nl-column-45 {
+	width: 45%; /* width for desktop */ 
+	height: 100%;
+	background-image: url('./assets/images/illustration-sign-up-desktop.svg');
+	border-radius: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.nl-list-container {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+/* Newsletter form styling  */
+.nl-signup-form form {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.label-error-container {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.label {
+	font-weight: 700;
+	font-size: 14px;
+	color: #000;
+}
+.error {
+	font-size: 14px;
+	font-weight: 500;
+	color: red;
+}
+.nl-input{
+	padding: 15px 20px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	font-family: 'Roboto-regular';
+	font-size: 16px;
+}
+.nl-input-error {
+	border: 1px solid red !important;
+	color: hsl(0, 100%, 50%) !important;
+	background: rgba(255,127,136, 0.3) !important;
+}
+.nl-input:focus {
+	outline: none;
+}
+.button{
+	padding: 18px;
+	border: none;
+	font-family: 'Roboto-bold';
+	border-radius: 5px;
+	color: #fff;
+	letter-spacing: 0.1em;
+	width: 100%;
+	background: linear-gradient(45deg, #232742, #232742);
+	/* box-shadow: 2px 8px 3px 5px rgba(255,77,118, 0.1); */
+	box-shadow: 0 8px 8px -5px #232742;
+	/* box-shadow: 0 0 5px #ff4d76; */
+	cursor: pointer;
+}
+.button-active {
+	background: linear-gradient(45deg, #ff4d76, #fd9146) !important;
+	box-shadow: 0 8px 8px -5px #ff4d76 !important;
+}
+
+/* Thank you section */
+
+.nl-thank-container{
+	display: flex;
+	width: 30%;
+	height: auto;
+	background: #fff;
+	padding: 40px; /* Padding for desktop */ 
+	border-radius: 20px;
+}
+.nl-thank-container img {
+	width: 50px;
+	height: 50px;
+}
+.nl-thank-container h2 {
+	font-size: 45px !important;
+}
+.nl-thank-container p {
+	font-size: 16px !important;
+	line-height: 1.5em;
+	margin-bottom: 20px;
+}
+.hide-container{
+	display: none !important;
+}
+@media(min-width: 750px) and (max-width: 1400px) {
+	body {
+		padding: 0px !important;
+	}
+	.nl-container {
+		width: 100% !important;
+		height: 100%;
+		border-radius: 0 !important;
+	}
+	.nl-thank-container {
+		width: 50%;
+	}
+}
+@media(min-width: 100px) and (max-width: 750px) { 
+	h1 {
+		font-size: 45px !important;
+	}
+	p {
+		line-height: 1.5em !important;
+	}
+	body {
+		padding: 0px !important;
+		height: auto !important;
+	}
+	.nl-container {
+		padding: 0px !important;
+		flex-direction:  column-reverse !important;
+		width: 100% !important;
+		height: 100% !important;
+		border-radius: 0 !important;
+	}
+	.nl-thank-container {
+		padding: 50px !important;
+		justify-content: center !important;
+		align-items: center !important;
+		width: 100% !important;
+		height: 100vh !important;
+		border-radius: 0 !important;
+	}
+	.nl-column-55 {
+		width: 100% !important;
+		padding: 20px;
+	}
+	.nl-column-45 {
+		width: 100% !important;
+		height: 300px !important;
+		background-image: url('./assets/images/illustration-sign-up-mobile.svg');
+		border-radius: 0 !important;
+		border-bottom-left-radius: 20px !important;
+		border-bottom-right-radius: 20px !important;
+	}
+}
+
+
+
+

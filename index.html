@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<title>News Latter Sign Up</title>
+</head>
+<body>
+		<div class="nl-container">
+			<div class="nl-column-55">
+				<h1 class="nl-title">Stay updated!</h1>
+				<p class="nl-subtitle">Join 60,000+ product managers receiving monthly updates on</p>
+				<div class="nl-list-container">
+					<p class="nl-info-icon"><img src="./assets/images/icon-list.svg"></p>
+					<p class="nl-list">Product discovery and building what matters </p>
+				</div>
+				<div class="nl-list-container">
+					<p class="nl-info-icon"><img src="./assets/images/icon-list.svg"></p>
+					<p class="nl-list">Measuring to ensure updates are a success </p>
+				</div>
+				<div class="nl-list-container">
+					<p class="nl-info-icon"><img src="./assets/images/icon-list.svg"></p>
+					<p class="nl-list">And much more! </p>
+				</div>	
+				<div class="nl-signup-form">
+					<form action="" autocomplete="off" id="news-letter-form">
+						<div class="label-error-container">
+							<p for="" class="label"> Email Address </p>
+							<p for="" class="error">  </p>
+						</div>
+						<input class="nl-input" id="nl-input" type="text" placeholder="email@company.com">
+						<button class="button" type="button" onclick="submitForm()">Subscribe to monthly newsletter</button>
+					</form>
+				</div>
+			</div>
+			<div class="nl-column-45">
+			</div>
+		</div>
+		<div class="nl-thank-container hide-container" >
+			<div class="nl-column-100">
+				<img src="./assets/images/icon-success.svg">
+				<h2>Thanks for subscribing!</h2>
+				<p>A confirmation email has been sent to <b><span id="nl_email_id"></span></b>. Please open it and click the button inside to confirm your subscription</p>
+				<button class="button" onclick="dismiss_message()">Dismiss Message</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

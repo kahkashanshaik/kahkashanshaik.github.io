@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="calci-container">
+        <form class="calci-age-inputs">
+            <div class="input-label" id="day-div">
+                <label>DAY</label>
+                <input type="number" name="day" class="age-input-box" id="day" placeholder="DD" required>
+                <p class="days-error-message"></p>
+            </div> 
+            <div class="input-label" id="month-div">
+                <label>MONTH</label>
+                <input type="number" name="month" class="age-input-box" id="month" placeholder="MM" required>
+                <p class="months-error-message"></p>
+            </div>
+            <div class="input-label" id="year-div">
+                <label>YEAR</label>
+                <input type="number" name="year" class="age-input-box" id="year" placeholder="YYYY" required>
+                <p class="years-error-message"></p>
+            </div>
+        </form>
+        <div class="divider-container">
+            <div class="divider"></div>
+            <div class="arrow-icon" onclick="ValidateAge()"><img src="./assets/images/icon-arrow.svg"></div>
+        </div>
+        <div class="result-container">
+            <div class="res-wrapper">
+                <div class="year-res result">
+                    
+                </div>
+                <h1>years</h1>
+            </div>
+            <div class="res-wrapper">
+                <div class="month-res result">
+                    
+                </div>
+                <h1>months</h1>
+            </div>
+            <div class="res-wrapper">
+                <div class="days-res result">
+                    
+                </div>
+                <h1>days</h1>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="script_new.js"></script>
+</body>
+</html>

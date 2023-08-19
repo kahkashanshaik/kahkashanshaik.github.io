@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+/* Gloabl Text Styling */
+
+/* Text Colors */
+.text-white {
+    color: #fff;
+}
+.light-white {
+    color:  rgba(255, 255, 255,0.6);
+}
+.light-red {
+    color: hsl(0, 100%, 67%);
+}
+.orangey-yellow {
+    color: hsl(39, 100%, 56%);
+}
+.green-teal {
+    color: hsl(166, 100%, 37%);
+}
+.cobalt-blue {
+    color: hsl(234, 85%, 45%);
+}
+/* text boldness */
+.bold-400 {
+    font-weight: 400;
+}
+.bold-500 {
+    font-weight: 500;
+}
+.bold-600 {
+    font-weight: 600;
+}
+.bold-700 {
+    font-weight: 700;
+}
+.bold-800 {
+    font-weight: 800;
+}
+/* text sizes */
+.text-xlg {
+    font-size: 65px;
+    line-height: 0.9em;
+    margin: 0;
+}
+.text-md {
+   font-size: 18px;
+}
+.text-xsm {
+    font-size: 14px;
+}
+.text-lg {
+    font-size: 25px;
+    margin: 0x;
+    line-height: 0em;
+    padding: 0px;
+}
+/* background colors */
+.bg-light-red {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+.bg-orangey-yellow {
+    background-color: hsla(39, 100%, 56%, 0.2);
+}
+.bg-green-teal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+.bg-cobalt-blue {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+body {
+    font-family: 'Poppins' !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100vh;    
+}
+.card-container {
+    background: #fff;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    display: flex;
+    border-radius: 20px;
+    width: 60%;
+}
+
+.column {
+    padding: 20px 30px; 
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.column:nth-child(1) {
+    /* background-color:  hsl(241, 81%, 54%);
+    background-image: linear-gradient( to bottom, hsl(252, 64%, 70%)); */
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    padding: 30px 40px !important;
+    background-color: hsl(241, 81%, 54%);
+    background-image: linear-gradient( to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+
+}
+.score-circle{
+    width: 200px;
+    height: 200px;
+    background-color: hsla(256, 72%, 46%, 1);
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.score-cards { 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.score-card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.right-info { 
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: hsla(256, 72%, 46%, 1);
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+@media(min-width: 700px) and (max-width: 1200px) {
+    .card-container {
+        width: 90% !important;
+    }
+}
+
+@media(min-width: 200px) and (max-width: 700px) {
+    body {
+        height: auto !important; 
+    }
+    .card-container {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    .column {
+        width: 100% !important;
+    }
+    .column:nth-child(1) {
+        border-radius: 0 !important;
+        border-bottom-left-radius: 20px !important;
+        border-bottom-right-radius: 20px !important;
+    }
+}
+
+
+

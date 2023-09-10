@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Poppins:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+body {
+    font-family: 'Space Grotesk' !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* global colors */
+.bg-dark-magento {
+    background-color: #5aa3a6;
+}
+.bg-light-magento{
+    background-color: #f0f5f8;
+}
+.text-light-grey {
+    color:  #9da5a5;
+}
+.text-dark-magento {
+    color: #69a6a3;
+}
+.job-position:hover{
+    color: #000;
+    cursor: pointer;
+}
+.header-container {
+    height: 200px;
+    background-image: url('./images/bg-header-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.job-desc li{
+    margin-left: 30px;
+    color: #9da5a5;
+}
+.job-desc li:nth-child(1) {
+    list-style-type: none;
+    margin-left: 0px;
+}
+.filter-tags:hover{
+    cursor: pointer;
+    background-color: #5aa3a6;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+.top-filter-container{
+    margin-top: -50px;
+    margin-bottom: 100px;
+}
+.cancel-btn{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.btn-cross{
+    border: none;
+    background-color: #5aa3a6;
+    color: #fff;
+    margin-top: -8px;
+}
+.listing:hover{
+    border-left: 5px solid #69a6a3; 
+}
+@media(min-width: 100px) and (max-width: 550px) { 
+    .header-container {
+        background-image: url('./images/bg-header-mobile.svg');
+    }
+    .company-logo{
+        display: flex !important;
+        justify-content: start !important;
+    }
+    .company-logo img{
+        margin-bottom: 10px !important;
+        float: left;
+    }
+    
+}

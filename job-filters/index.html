@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Job Filters</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- import boostrap v4.6.2 -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+			integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		/>
+		<!-- Import vue.js -->
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid px-0" id="app">
+			<div class="container-fluid bg-dark-magento px-0 header-container">
+				<!-- background header image -->
+			</div>
+			<div
+				v-if="SelectedFilters.length > 0"
+				class="container shadow bg-white py-4  top-filter-container"
+			>
+				<div class="row">
+					<div class="col-md-8 d-flex flex-wrap">
+						<span
+							class="bg-light-magento text-dark-magento font-weight-bolder mx-2 mb-2 pr-0 pl-2 pt-2 filter-tags"
+							style="font-size: 13px"
+							v-if="SelectedFilters"
+							v-for="(SelectedFilter, index) in SelectedFilters"
+						>
+							{{ SelectedFilter.split("-")[1] }}<button
+								class="btn-cross ml-2 py-2 px-2"
+								@click="removeFilterFromArray(SelectedFilter)"
+							>
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</span>
+					</div>
+					<div class="col-md-4 px-5">
+						<p
+							class="float-right font-weight-bolder text-dark-magento cancel-btn"
+							@click="resetFilter"
+						>
+							Clear
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="container my-5 px-4">
+				<div
+					class="row bg-white shadow rounded py-3 px-4 mb-3 listing"
+					v-if="job_filter_data"
+					v-for="(jobListing, index) in job_filter_data"
+				>
+					<div class="col-md-2 company-logo d-flex justify-content-center ">
+						<img :src="jobListing.logo" alt="" />
+					</div>
+					<div class="col-md-5 px-2">
+						<div class="row d-flex flex-row">
+							<h6 class="text-dark-magento font-weight-bold mr-3">
+								{{ jobListing.company }}
+							</h6>
+							<p
+								v-if="jobListing.new"
+								class="bg-dark-magento text-white px-2 rounded-pill mx-2"
+								style="font-size: 14px !important"
+							>
+								New
+							</p>
+							<p
+								v-if="jobListing.featured"
+								class="bg-dark text-white px-2 rounded-pill mx-2"
+								style="font-size: 14px !important"
+							>
+								Featured
+							</p>
+						</div>
+						<div class="row d-flex flex-row">
+							<h6
+								class="text-dark-magento font-weight-bolder job-position m-0 p-0"
+							>
+								{{ jobListing.position }}
+							</h6>
+						</div>
+						<ul
+							class="p-0 mt-2 d-flex flex-row job-desc justify-content-start align-items-center"
+						>
+							<li>{{ jobListing.postedAt }}</li>
+							<li>{{ jobListing.level }}</li>
+							<li>{{ jobListing.location }}</li>
+						</ul>
+					</div>
+					<div
+						class="col-md-5 d-flex align-items-center justify-content-center px-2"
+					>
+						<div class="row flex-wrap">
+							<span
+								class="bg-light-magento text-dark-magento font-weight-bolder mx-2 mb-2 rounded px-2 py-1 filter-tags"
+								style="font-size: 13px"
+								v-if="jobListing.role"
+								@click="filterData('role-'+jobListing.role)"
+							>
+								{{ jobListing.role }}
+							</span>
+
+							<span
+								class="bg-light-magento text-dark-magento font-weight-bolder mx-2 mb-2 rounded px-2 py-1 filter-tags"
+								style="font-size: 13px"
+								v-if="jobListing.level"
+								@click="filterData('level-'+jobListing.level)"
+							>
+								{{ jobListing.level }}
+							</span>
+
+							<span
+								class="bg-light-magento text-dark-magento font-weight-bolder mx-2 mb-2 rounded px-2 py-1 filter-tags"
+								style="font-size: 13px"
+								v-if="jobListing.languages"
+								v-for="(language, index) in jobListing.languages"
+								@click="filterData('languages-'+language)"
+							>
+								{{ language }}
+							</span>
+
+							<span
+								class="bg-light-magento text-dark-magento font-weight-bolder mx-2 mb-2 rounded px-2 py-1 filter-tags"
+								style="font-size: 13px"
+								v-if="jobListing.tools"
+								v-for="(tool, index) in jobListing.tools"
+								@click="filterData('tools-'+tool)"
+							>
+								{{ tool }}
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Import Jquery  -->
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.js"
+			integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			crossorigin="anonymous"
+		></script>
+		<!-- import boostrap js v4.6.2 -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+			integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+			crossorigin="anonymous"
+		></script>
+		<!-- import axios.js  -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"></script>
+		<!-- import main.js -->
+		<script src="main.js"></script>
+		<script>
+			// mount app
+			const mountedApp = app.mount("#app");
+		</script>
+	</body>
+</html>

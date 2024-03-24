@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+    <title>Bloggies</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <script defer src="./app.js"></script>
+</head>
+
+<body id="app" class="flex flex-col min-h-screen poppins">
+    <!-- header -->
+    <header class="shadow-md lg:flex lg:justify-start lg:px-20 sm:px lg:items-center fixed bg-white w-full">
+        <div class="flex justify-between items-center px-5 py-4">
+            <div>
+                <a href="index.html">
+                    <img src="./assets/logo.png" class="w-36">
+                </a>
+            </div>
+            <div class="sm:block lg:hidden menu-toggle-btn">
+                <button type="button"
+                    class="text-indigo-950 focus:outline-none hover:bg-indigo-950 hover:text-white hover:rounded-full hover:transition-all p-2 menu-toggle-btn">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" class="close_toggle hidden"
+                            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                        <path fill-rule="evenodd" class="open_toggle"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="text-md font-semibold pt-2 pb-4 px-4 sm:hidden  hidden lg:flex lg:items-center  mobile-menu w-full">
+            <a class="mt-1 block hover:bg-indigo-900 hover:text-white px-2 py-1 lg:ml-2 " href="index.html">Home</a>
+            <a class="mt-1 block hover:bg-indigo-900 hover:text-white px-2 py-1 lg:ml-2 "
+                href="categories.html">Topics</a>
+            <a class="mt-1 block hover:bg-indigo-900 hover:text-white px-2 py-1 lg:ml-2"
+                href="become-writer.html">Become
+                Writer</a>
+            <a class="mt-1 block hover:bg-indigo-900 hover:text-white px-2 py-1 lg:ml-2" href="contact.html">Contact
+                Us</a>
+            <form action="/pages/search.html" class="ml-auto mt-4  lg:mt-0" method="POST">
+                <input type="text" placeholder="Search for your topic" name="search"
+                    class="border border-gray-500 px-4  py-3 rounded-l-3xl focus:outline-none">
+                <button type="submit" class="bg-indigo-900 text-white py-3 rounded-r-3xl -ml-1 px-3">Go</button>
+            </form>
+        </div>
+    </header>
+    <!-- header ends -->
+    <div class="mt-16 py-16 w-full ">
+        <h1 class="text-5xl font-semibold text-center text-indigo-900">Showing Result For: </h1>
+        <p class="text-center text-2xl mt-11 font-semibold"><span class="font-bold">Search:</span> Artificial
+            Intelligence</p>
+    </div>
+    <section class="flex flex-col w-full h-full justify-center items-center mx-auto py-0 ">
+        <div class="w-4/5 lg:w-10/12">
+            <div class="flex flex-col">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                    <!-- blog posts -->
+                    <article class="my-0">
+                        <div class="grid grid-cols-1 gap-4 shadow-md border rounded-md border-none">
+                            <div
+                                class="flex h-28 md:h-40 w-full rounded-md bg-cover bg-center items-center justify-center">
+                                <img src="assets/blog_imgs/blog-img-1.webp" class="w-full h-full" />
+                            </div>
+                            <div class="col-span-2 p-2 lg:p-3">
+                                <div class="flex justify-between">
+                                    <a href="single-post.html">
+                                        <h1 class="text-sm md:text-base font-semibold">
+                                            His mother had always taught him
+                                        </h1>
+                                    </a>
+                                    <div class="flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 471.701 471.701"
+                                            style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M433.601 67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7 13.6-92.4 38.3l-12.9 12.9-13.1-13.1c-24.7-24.7-57.6-38.4-92.5-38.4-34.8 0-67.6 13.6-92.2 38.2-24.7 24.7-38.3 57.5-38.2 92.4 0 34.9 13.7 67.6 38.4 92.3l187.8 187.8c2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-3.9l188.2-187.5c24.7-24.7 38.3-57.5 38.3-92.4.1-34.9-13.4-67.7-38.1-92.4zm-19.2 165.7-178.7 178-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3s10.7-53.7 30.3-73.2c19.5-19.5 45.5-30.3 73.1-30.3 27.7 0 53.8 10.8 73.4 30.4l22.6 22.6c5.3 5.3 13.8 5.3 19.1 0l22.4-22.4c19.6-19.6 45.7-30.4 73.3-30.4 27.6 0 53.6 10.8 73.2 30.3 19.6 19.6 30.3 45.6 30.3 73.3.1 27.7-10.7 53.7-30.3 73.3z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 32 32" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M26 31a1 1 0 0 1-.62-.22L16 23.28l-9.37 7.5A1 1 0 0 1 5 30V2a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v28a1 1 0 0 1-.57.9.91.91 0 0 1-.43.1zM16 21a1 1 0 0 1 .63.22l8.37 6.7V3H7v24.92l8.38-6.7A1 1 0 0 1 16 21z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="m-3 text-sm/6 hidden md:block">His mother had always taught him not to ever
+                                    think of himself
+                                    as
+                                    better than others. He'd tried to live by this motto.
+                                    He never .....</p>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="category-archive.html">
+                                            <span class="text-indigo-900 font-bold rounded-md text-xs p-2">Artificial
+                                                Intelligence</span>
+                                        </a>
+                                    </div>
+                                    <a href="single-post.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0"
+                                            y="0" viewBox="0 0 48 48" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path fill="#000000"
+                                                    d="m47.12 31.403-9.992-9.992a2.98 2.98 0 1 0-4.215 4.216l3.037 3.037C15.565 29.665 2.31 15.984 2.188 1.96c-.004-.507-.716-.61-.874-.144-4.922 14.579 4.03 32.89 27.427 36.201 2.266.295 4.558.519 6.868.681l-2.697 2.697a2.98 2.98 0 1 0 4.215 4.215l9.992-9.992a2.98 2.98 0 0 0 .001-4.215z"
+                                                    opacity="1" data-original="#ffcc66" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="my-0">
+                        <div class="grid grid-cols-1 gap-4 shadow-md border rounded-md border-none">
+                            <div
+                                class="flex h-28 md:h-40 w-full rounded-md bg-cover bg-center items-center justify-center">
+                                <img src="assets/blog_imgs/blog-img-2.webp" class="w-full h-full" />
+                            </div>
+                            <div class="col-span-2 p-2 lg:p-3">
+                                <div class="flex justify-between">
+                                    <a href="single-post.html">
+                                        <h1 class="text-sm md:text-base font-semibold">
+                                            Meet Devin: The World’s First AI Software Engineer.
+                                        </h1>
+                                    </a>
+                                    <div class="flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 471.701 471.701"
+                                            style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M433.601 67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7 13.6-92.4 38.3l-12.9 12.9-13.1-13.1c-24.7-24.7-57.6-38.4-92.5-38.4-34.8 0-67.6 13.6-92.2 38.2-24.7 24.7-38.3 57.5-38.2 92.4 0 34.9 13.7 67.6 38.4 92.3l187.8 187.8c2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-3.9l188.2-187.5c24.7-24.7 38.3-57.5 38.3-92.4.1-34.9-13.4-67.7-38.1-92.4zm-19.2 165.7-178.7 178-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3s10.7-53.7 30.3-73.2c19.5-19.5 45.5-30.3 73.1-30.3 27.7 0 53.8 10.8 73.4 30.4l22.6 22.6c5.3 5.3 13.8 5.3 19.1 0l22.4-22.4c19.6-19.6 45.7-30.4 73.3-30.4 27.6 0 53.6 10.8 73.2 30.3 19.6 19.6 30.3 45.6 30.3 73.3.1 27.7-10.7 53.7-30.3 73.3z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 32 32" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M26 31a1 1 0 0 1-.62-.22L16 23.28l-9.37 7.5A1 1 0 0 1 5 30V2a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v28a1 1 0 0 1-.57.9.91.91 0 0 1-.43.1zM16 21a1 1 0 0 1 .63.22l8.37 6.7V3H7v24.92l8.38-6.7A1 1 0 0 1 16 21z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="m-3 text-sm/6 hidden md:block">Tech company Cognition introduces Devin, the
+                                    world’s first AI
+                                    software engineer capable of coding, creating websites....</p>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="category-archive.html">
+                                            <span class="text-indigo-900 font-bold rounded-md text-xs p-2">Artificial
+                                                Intelligence</span>
+                                        </a>
+                                    </div>
+                                    <a href="single-post.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0"
+                                            y="0" viewBox="0 0 48 48" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path fill="#000000"
+                                                    d="m47.12 31.403-9.992-9.992a2.98 2.98 0 1 0-4.215 4.216l3.037 3.037C15.565 29.665 2.31 15.984 2.188 1.96c-.004-.507-.716-.61-.874-.144-4.922 14.579 4.03 32.89 27.427 36.201 2.266.295 4.558.519 6.868.681l-2.697 2.697a2.98 2.98 0 1 0 4.215 4.215l9.992-9.992a2.98 2.98 0 0 0 .001-4.215z"
+                                                    opacity="1" data-original="#ffcc66" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="my-0">
+                        <div class="grid grid-cols-1 gap-4 shadow-md border rounded-md border-none">
+                            <div
+                                class="flex h-28 md:h-40 w-full rounded-md bg-cover bg-center items-center justify-center">
+                                <img src="assets/blog_imgs/blog-img-4.webp" class="w-full h-full" />
+                            </div>
+                            <div class="col-span-2 p-2 lg:p-3">
+                                <div class="flex justify-between">
+                                    <a href="single-post.html">
+                                        <h1 class="text-sm md:text-base font-semibold">
+                                            Three Quick Quotes From Alan Watts That Helped Me Master the Subtle Art of
+                                            Letting Go
+                                        </h1>
+                                    </a>
+                                    <div class="flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 471.701 471.701"
+                                            style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M433.601 67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7 13.6-92.4 38.3l-12.9 12.9-13.1-13.1c-24.7-24.7-57.6-38.4-92.5-38.4-34.8 0-67.6 13.6-92.2 38.2-24.7 24.7-38.3 57.5-38.2 92.4 0 34.9 13.7 67.6 38.4 92.3l187.8 187.8c2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-3.9l188.2-187.5c24.7-24.7 38.3-57.5 38.3-92.4.1-34.9-13.4-67.7-38.1-92.4zm-19.2 165.7-178.7 178-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3s10.7-53.7 30.3-73.2c19.5-19.5 45.5-30.3 73.1-30.3 27.7 0 53.8 10.8 73.4 30.4l22.6 22.6c5.3 5.3 13.8 5.3 19.1 0l22.4-22.4c19.6-19.6 45.7-30.4 73.3-30.4 27.6 0 53.6 10.8 73.2 30.3 19.6 19.6 30.3 45.6 30.3 73.3.1 27.7-10.7 53.7-30.3 73.3z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 32 32" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M26 31a1 1 0 0 1-.62-.22L16 23.28l-9.37 7.5A1 1 0 0 1 5 30V2a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v28a1 1 0 0 1-.57.9.91.91 0 0 1-.43.1zM16 21a1 1 0 0 1 .63.22l8.37 6.7V3H7v24.92l8.38-6.7A1 1 0 0 1 16 21z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="m-3 text-sm/6 hidden md:block">Today, I ran into a childhood friend; she was
+                                    crying.
+                                    She was dressed in pieces of a withered dream that refuses to....</p>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="category-archive.html">
+                                            <span class="text-indigo-900 font-bold rounded-md text-xs p-2">Artificial
+                                                Intelligence</span>
+                                        </a>
+                                    </div>
+                                    <a href="single-post.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0"
+                                            y="0" viewBox="0 0 48 48" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path fill="#000000"
+                                                    d="m47.12 31.403-9.992-9.992a2.98 2.98 0 1 0-4.215 4.216l3.037 3.037C15.565 29.665 2.31 15.984 2.188 1.96c-.004-.507-.716-.61-.874-.144-4.922 14.579 4.03 32.89 27.427 36.201 2.266.295 4.558.519 6.868.681l-2.697 2.697a2.98 2.98 0 1 0 4.215 4.215l9.992-9.992a2.98 2.98 0 0 0 .001-4.215z"
+                                                    opacity="1" data-original="#ffcc66" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="my-0">
+                        <div class="grid grid-cols-1 gap-4 shadow-md border rounded-md border-none">
+                            <div
+                                class="flex h-28 md:h-40 w-full rounded-md bg-cover bg-center items-center justify-center">
+                                <img src="assets/blog_imgs/blog-img-5.webp" class="w-full h-full" />
+                            </div>
+                            <div class="col-span-2 p-2 lg:p-3">
+                                <div class="flex justify-between">
+                                    <a href="single-post.html">
+                                        <h1 class="text-sm md:text-base font-semibold">
+                                            Roadmap to Learn AI in 2024
+                                        </h1>
+                                    </a>
+                                    <div class="flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 471.701 471.701"
+                                            style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M433.601 67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7 13.6-92.4 38.3l-12.9 12.9-13.1-13.1c-24.7-24.7-57.6-38.4-92.5-38.4-34.8 0-67.6 13.6-92.2 38.2-24.7 24.7-38.3 57.5-38.2 92.4 0 34.9 13.7 67.6 38.4 92.3l187.8 187.8c2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-3.9l188.2-187.5c24.7-24.7 38.3-57.5 38.3-92.4.1-34.9-13.4-67.7-38.1-92.4zm-19.2 165.7-178.7 178-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3s10.7-53.7 30.3-73.2c19.5-19.5 45.5-30.3 73.1-30.3 27.7 0 53.8 10.8 73.4 30.4l22.6 22.6c5.3 5.3 13.8 5.3 19.1 0l22.4-22.4c19.6-19.6 45.7-30.4 73.3-30.4 27.6 0 53.6 10.8 73.2 30.3 19.6 19.6 30.3 45.6 30.3 73.3.1 27.7-10.7 53.7-30.3 73.3z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 32 32" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M26 31a1 1 0 0 1-.62-.22L16 23.28l-9.37 7.5A1 1 0 0 1 5 30V2a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v28a1 1 0 0 1-.57.9.91.91 0 0 1-.43.1zM16 21a1 1 0 0 1 .63.22l8.37 6.7V3H7v24.92l8.38-6.7A1 1 0 0 1 16 21z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="m-3 text-sm/6 hidden md:block">If you found this roadmap helpful, follow me on
+                                    Twitter and
+                                    LinkedIn! Also subscribe to this newsletter where I share.....</p>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="category-archive.html">
+                                            <span class="text-indigo-900 font-bold rounded-md text-xs p-2">Artificial
+                                                Intelligence</span>
+                                        </a>
+                                    </div>
+                                    <a href="single-post.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0"
+                                            y="0" viewBox="0 0 48 48" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path fill="#000000"
+                                                    d="m47.12 31.403-9.992-9.992a2.98 2.98 0 1 0-4.215 4.216l3.037 3.037C15.565 29.665 2.31 15.984 2.188 1.96c-.004-.507-.716-.61-.874-.144-4.922 14.579 4.03 32.89 27.427 36.201 2.266.295 4.558.519 6.868.681l-2.697 2.697a2.98 2.98 0 1 0 4.215 4.215l9.992-9.992a2.98 2.98 0 0 0 .001-4.215z"
+                                                    opacity="1" data-original="#ffcc66" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="my-0">
+                        <div class="grid grid-cols-1 gap-4 shadow-md border rounded-md border-none">
+                            <div
+                                class="flex h-28 md:h-40 w-full rounded-md bg-cover bg-center items-center justify-center">
+                                <img src="assets/blog_imgs/blog-img-3.webp" class="w-full h-full" />
+                            </div>
+                            <div class="col-span-2 p-2 lg:p-3">
+                                <div class="flex justify-between">
+                                    <a href="single-post.html">
+                                        <h1 class="text-sm md:text-base font-semibold">
+                                            ChatGPT just went rogue and we don’t know why
+
+                                        </h1>
+                                    </a>
+                                    <div class="flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 471.701 471.701"
+                                            style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M433.601 67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7 13.6-92.4 38.3l-12.9 12.9-13.1-13.1c-24.7-24.7-57.6-38.4-92.5-38.4-34.8 0-67.6 13.6-92.2 38.2-24.7 24.7-38.3 57.5-38.2 92.4 0 34.9 13.7 67.6 38.4 92.3l187.8 187.8c2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-3.9l188.2-187.5c24.7-24.7 38.3-57.5 38.3-92.4.1-34.9-13.4-67.7-38.1-92.4zm-19.2 165.7-178.7 178-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3s10.7-53.7 30.3-73.2c19.5-19.5 45.5-30.3 73.1-30.3 27.7 0 53.8 10.8 73.4 30.4l22.6 22.6c5.3 5.3 13.8 5.3 19.1 0l22.4-22.4c19.6-19.6 45.7-30.4 73.3-30.4 27.6 0 53.6 10.8 73.2 30.3 19.6 19.6 30.3 45.6 30.3 73.3.1 27.7-10.7 53.7-30.3 73.3z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 32 32" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M26 31a1 1 0 0 1-.62-.22L16 23.28l-9.37 7.5A1 1 0 0 1 5 30V2a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v28a1 1 0 0 1-.57.9.91.91 0 0 1-.43.1zM16 21a1 1 0 0 1 .63.22l8.37 6.7V3H7v24.92l8.38-6.7A1 1 0 0 1 16 21z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="m-3 text-sm/6 hidden md:block">Are our digital overlords readying their
+                                    full-scale invasion
+                                    already?
+                                    Last night, ChatGPT users reported occurrences of the generative language....</p>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="category-archive.html">
+                                            <span class="text-indigo-900 font-bold rounded-md text-xs p-2">Artificial
+                                                Intelligence</span>
+                                        </a>
+                                    </div>
+                                    <a href="single-post.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0"
+                                            y="0" viewBox="0 0 48 48" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path fill="#000000"
+                                                    d="m47.12 31.403-9.992-9.992a2.98 2.98 0 1 0-4.215 4.216l3.037 3.037C15.565 29.665 2.31 15.984 2.188 1.96c-.004-.507-.716-.61-.874-.144-4.922 14.579 4.03 32.89 27.427 36.201 2.266.295 4.558.519 6.868.681l-2.697 2.697a2.98 2.98 0 1 0 4.215 4.215l9.992-9.992a2.98 2.98 0 0 0 .001-4.215z"
+                                                    opacity="1" data-original="#ffcc66" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="my-0">
+                        <div class="grid grid-cols-1 gap-4 shadow-md border rounded-md border-none">
+                            <div
+                                class="flex h-28 md:h-40 w-full rounded-md bg-cover bg-center items-center justify-center">
+                                <img src="assets/blog_imgs/blog-img-6.webp" class="w-full h-full" />
+                            </div>
+                            <div class="col-span-2 p-2 lg:p-3">
+                                <div class="flex justify-between">
+                                    <a href="single-post.html">
+                                        <h1 class="text-sm md:text-base font-semibold">
+                                            Intro to DSPy: Goodbye Prompting, Hello Programming!
+
+                                        </h1>
+                                    </a>
+                                    <div class="flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 471.701 471.701"
+                                            style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M433.601 67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7 13.6-92.4 38.3l-12.9 12.9-13.1-13.1c-24.7-24.7-57.6-38.4-92.5-38.4-34.8 0-67.6 13.6-92.2 38.2-24.7 24.7-38.3 57.5-38.2 92.4 0 34.9 13.7 67.6 38.4 92.3l187.8 187.8c2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-3.9l188.2-187.5c24.7-24.7 38.3-57.5 38.3-92.4.1-34.9-13.4-67.7-38.1-92.4zm-19.2 165.7-178.7 178-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3s10.7-53.7 30.3-73.2c19.5-19.5 45.5-30.3 73.1-30.3 27.7 0 53.8 10.8 73.4 30.4l22.6 22.6c5.3 5.3 13.8 5.3 19.1 0l22.4-22.4c19.6-19.6 45.7-30.4 73.3-30.4 27.6 0 53.6 10.8 73.2 30.3 19.6 19.6 30.3 45.6 30.3 73.3.1 27.7-10.7 53.7-30.3 73.3z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 32 32" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M26 31a1 1 0 0 1-.62-.22L16 23.28l-9.37 7.5A1 1 0 0 1 5 30V2a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v28a1 1 0 0 1-.57.9.91.91 0 0 1-.43.1zM16 21a1 1 0 0 1 .63.22l8.37 6.7V3H7v24.92l8.38-6.7A1 1 0 0 1 16 21z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="m-3 text-sm/6 hidden md:block">Currently, building applications using large
+                                    language models
+                                    (LLMs) can be not only complex but also fragile....</p>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="category-archive.html">
+                                            <span class="text-indigo-900 font-bold rounded-md text-xs p-2">Artificial
+                                                Intelligence</span>
+                                        </a>
+                                    </div>
+                                    <a href="single-post.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0"
+                                            y="0" viewBox="0 0 48 48" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path fill="#000000"
+                                                    d="m47.12 31.403-9.992-9.992a2.98 2.98 0 1 0-4.215 4.216l3.037 3.037C15.565 29.665 2.31 15.984 2.188 1.96c-.004-.507-.716-.61-.874-.144-4.922 14.579 4.03 32.89 27.427 36.201 2.266.295 4.558.519 6.868.681l-2.697 2.697a2.98 2.98 0 1 0 4.215 4.215l9.992-9.992a2.98 2.98 0 0 0 .001-4.215z"
+                                                    opacity="1" data-original="#ffcc66" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="my-0">
+                        <div class="grid grid-cols-1 gap-4 shadow-md border rounded-md border-none">
+                            <div
+                                class="flex h-28 md:h-40 w-full rounded-md bg-cover bg-center items-center justify-center">
+                                <img src="assets/blog_imgs/blog-img-7.webp" class="w-full h-full" />
+                            </div>
+                            <div class="col-span-2 p-2 lg:p-3">
+                                <div class="flex justify-between">
+                                    <a href="single-post.html">
+                                        <h1 class="text-sm md:text-base font-semibold">
+                                            Nobody wants to work with our best engineer
+                                        </h1>
+                                    </a>
+                                    <div class="flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 471.701 471.701"
+                                            style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M433.601 67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7 13.6-92.4 38.3l-12.9 12.9-13.1-13.1c-24.7-24.7-57.6-38.4-92.5-38.4-34.8 0-67.6 13.6-92.2 38.2-24.7 24.7-38.3 57.5-38.2 92.4 0 34.9 13.7 67.6 38.4 92.3l187.8 187.8c2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-3.9l188.2-187.5c24.7-24.7 38.3-57.5 38.3-92.4.1-34.9-13.4-67.7-38.1-92.4zm-19.2 165.7-178.7 178-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3s10.7-53.7 30.3-73.2c19.5-19.5 45.5-30.3 73.1-30.3 27.7 0 53.8 10.8 73.4 30.4l22.6 22.6c5.3 5.3 13.8 5.3 19.1 0l22.4-22.4c19.6-19.6 45.7-30.4 73.3-30.4 27.6 0 53.6 10.8 73.2 30.3 19.6 19.6 30.3 45.6 30.3 73.3.1 27.7-10.7 53.7-30.3 73.3z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" x="0"
+                                            y="0" viewBox="0 0 32 32" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path
+                                                    d="M26 31a1 1 0 0 1-.62-.22L16 23.28l-9.37 7.5A1 1 0 0 1 5 30V2a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v28a1 1 0 0 1-.57.9.91.91 0 0 1-.43.1zM16 21a1 1 0 0 1 .63.22l8.37 6.7V3H7v24.92l8.38-6.7A1 1 0 0 1 16 21z"
+                                                    fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="m-3 text-sm/6 hidden md:block">There was a wizard engineer (we’ll call him
+                                    “Jon”) who worked
+                                    for me a few years ago. His code was good. His PRs were....</p>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <a href="category-archive.html">
+                                            <span class="text-indigo-900 font-bold rounded-md text-xs p-2">Artificial
+                                                Intelligence</span>
+                                        </a>
+                                    </div>
+                                    <a href="single-post.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" x="0"
+                                            y="0" viewBox="0 0 48 48" style="enable-background: new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <path fill="#000000"
+                                                    d="m47.12 31.403-9.992-9.992a2.98 2.98 0 1 0-4.215 4.216l3.037 3.037C15.565 29.665 2.31 15.984 2.188 1.96c-.004-.507-.716-.61-.874-.144-4.922 14.579 4.03 32.89 27.427 36.201 2.266.295 4.558.519 6.868.681l-2.697 2.697a2.98 2.98 0 1 0 4.215 4.215l9.992-9.992a2.98 2.98 0 0 0 .001-4.215z"
+                                                    opacity="1" data-original="#ffcc66" class=""></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- blog posts ends -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="w-full flex  flex-col items-center justify-center py-5 mt-14">
+            <div class="w-3/4 h-px bg-gray-300 mb-5"></div>
+            <p class="text-black text-sm font-medium">Build with <span class="text-xl">&#9829;</span> by kahkashan </p>
+        </div>
+        <script type="module" src="./main.js"></script>
+    </footer>
+    <!-- footer ends -->
+</body>
+
+</html>

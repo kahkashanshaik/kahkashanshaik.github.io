@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+    <title>Bloggies</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <script defer src="./app.js"></script>
+</head>
+
+<body id="app" class="flex flex-col min-h-screen poppins">
+    <!-- header -->
+    <header class="shadow-md lg:flex lg:justify-start lg:px-20 sm:px lg:items-center fixed bg-white w-full">
+        <div class="flex justify-between items-center px-5 py-4">
+            <div>
+                <a href="index.html">
+                    <img src="./assets/logo.png" class="w-36">
+                </a>
+            </div>
+            <div class="sm:block lg:hidden menu-toggle-btn">
+                <button type="button"
+                    class="text-indigo-950 focus:outline-none hover:bg-indigo-950 hover:text-white hover:rounded-full hover:transition-all p-2 menu-toggle-btn">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" class="close_toggle hidden"
+                            d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+                        <path fill-rule="evenodd" class="open_toggle"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="text-md font-semibold pt-2 pb-4 px-4 sm:hidden  hidden lg:flex lg:items-center  mobile-menu w-full">
+            <a class="mt-1 block hover:bg-indigo-900 hover:text-white px-2 py-1 lg:ml-2 " href="index.html">Home</a>
+            <a class="mt-1 block hover:bg-indigo-900 hover:text-white px-2 py-1 lg:ml-2"
+                href="categories.html">Topics</a>
+            <a class="mt-1 block hover:bg-indigo-900 hover:text-white px-2 py-1 lg:ml-2"
+                href="become-writer.html">Become
+                Writer</a>
+            <a class="mt-1 block hover:bg-indigo-900 hover:text-white px-2 py-1 lg:ml-2 bg-indigo-900 text-white"
+                href="contact.html">Contact
+                Us</a>
+            <form action="/pages/search.html" class="ml-auto mt-4  lg:mt-0" method="POST">
+                <input type="text" placeholder="Search for your topic" name="search"
+                    class="border border-gray-500 px-4  py-3 rounded-l-3xl focus:outline-none">
+                <button type="submit" class="bg-indigo-900 text-white py-3 rounded-r-3xl -ml-1 px-3">Go</button>
+            </form>
+        </div>
+    </header>
+    <!-- header ends -->
+    <div class="mt-16 py-16 w-full  flex flex-col items-center justify-center ">
+        <h1 class="text-5xl font-semibold">Contact Us</h1>
+        <div class="w-20 h-2 bg-indigo-900 mt-6"></div>
+        <div class="shadow-lg rounded-md w-4/5 mt-10">
+            <form action="" class="px-6 py-16 flex flex-col gap-3 ">
+                <div class="flex flex-col gap-3">
+                    <label for="name" class="font-semibold text-sm">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name"
+                        class="border border-gray-300 rounded-md px-3 py-3 outline-none">
+                </div>
+                <div class="flex flex-col gap-3">
+                    <label for="email" class="font-semibold text-sm">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email address"
+                        class="border border-gray-300 rounded-md px-3 py-3 outline-none">
+                </div>
+                <div class="flex flex-col gap-3">
+                    <label for="phone_number" class="font-semibold text-sm">Phone Number</label>
+                    <input type="number" id="phone_number" placeholder="Enter your phone number"
+                        class="border border-gray-300 rounded-md px-3 py-3 outline-none">
+                </div>
+                <div class="flex flex-col gap-3">
+                    <label for="message" class="font-semibold text-sm">Write your message</label>
+                    <textarea type="text" id="message" placeholder="Write about your query" rows="9"
+                        class="border border-gray-300 rounded-md px-3 py-3 outline-none"></textarea>
+                </div>
+                <div class="w-full">
+                    <button
+                        class="bg-indigo-900 text-white px-7 py-3 text-sm font-medium hover:bg-indigo-950 duration-75">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="w-full flex  flex-col items-center justify-center py-5 mt-14">
+            <div class="w-3/4 h-px bg-gray-300 mb-5"></div>
+            <p class="text-black text-sm font-medium">Build with <span class="text-xl">&#9829;</span> by kahkashan </p>
+        </div>
+        <script type="module" src="./main.js"></script>
+    </footer>
+    <!-- footer ends -->
+</body>
+
+</html>

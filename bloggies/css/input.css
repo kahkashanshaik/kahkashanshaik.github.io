@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    font-family: 'Poppins';
+}
+.sticky {
+    height: 10rem;
+    flex-grow: 1;
+    flex-basis: 300px;
+    position: sticky;
+    top: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+.hero-section {
+    background-image: url('../assets/hero-image.gif');
+}
+
+@media only screen and (max-width: 480px) {
+    .hero-section {
+        background-image: url('../assets/mobile-hero-image.png');
+    }
+}
